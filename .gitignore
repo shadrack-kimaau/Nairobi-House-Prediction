@@ -30,6 +30,9 @@ env/
 .ipynb_checkpoints
 *.ipynb_checkpoints/
 
+# Presentation (remove this line when ready to share)
+presentation/
+
 # Data
 data/raw/*.csv
 data/raw/*.xlsx
