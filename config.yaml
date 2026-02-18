@@ -1,0 +1,45 @@
+# Project Configuration
+
+project:
+  name: "Nairobi House Prediction"
+  version: "0.1.0"
+  description: "Machine learning project for predicting house prices in Nairobi"
+
+data:
+  raw_path: "data/raw/"
+  processed_path: "data/processed/"
+  test_size: 0.2
+  random_state: 42
+
+features:
+  target: "price"
+  numerical: []  # To be filled during development
+  categorical: []  # To be filled during development
+
+model:
+  type: "random_forest"  # Can be changed based on best performance
+  random_state: 42
+  
+  # Model parameters (to be tuned)
+  params:
+    n_estimators: 100
+    max_depth: null
+    min_samples_split: 2
+    min_samples_leaf: 1
+
+  # Cross-validation settings
+  cv_folds: 5
+
+evaluation:
+  metrics:
+    - "rmse"
+    - "mae"
+    - "r2"
+    - "mape"
+
+paths:
+  models: "models/"
+  notebooks: "notebooks/"
+  src: "src/"
+  app: "app/"
+  dashboard: "dashboard/"

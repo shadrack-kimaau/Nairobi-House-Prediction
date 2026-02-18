@@ -1,0 +1,32 @@
+# Core Data Science Libraries
+numpy
+pandas
+scipy
+
+# Machine Learning
+scikit-learn
+xgboost
+lightgbm
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Web Applications
+streamlit
+dash
+
+# Data Processing
+openpyxl
+xlrd
+
+# Utilities
+python-dotenv
+pyyaml
+joblib
+
+# Jupyter
+jupyter
+ipykernel
+notebook
