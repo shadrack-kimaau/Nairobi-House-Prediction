@@ -30,15 +30,17 @@ env/
 .ipynb_checkpoints
 *.ipynb_checkpoints/
 
+MINE
+
 # Presentation (remove this line when ready to share)
 presentation/
 
 # Data
-data/raw/*.csv
-data/raw/*.xlsx
-data/raw/*.json
-data/processed/*.csv
-data/processed/*.pkl
+#data/raw/*.csv
+#data/raw/*.xlsx
+#data/raw/*.json
+#data/processed/*.csv
+#data/processed/*.pkl
 
 # Models
 models/*.pkl
