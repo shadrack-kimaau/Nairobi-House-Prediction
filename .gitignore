@@ -43,7 +43,7 @@ presentation/
 #data/processed/*.pkl
 
 # Models
-models/*.pkl
+#models/*.pkl
 models/*.joblib
 models/*.h5
 
