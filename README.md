@@ -8,12 +8,12 @@ An end-to-end machine learning project that predicts house prices in Nairobi, Ke
 **Focus:** This project emphasizes completing the full ML pipeline rather than achieving perfect accuracy, providing valuable learning experience across all stages of a data science project.
 
 ## Key Features
-- 🏠 **Real-world data** scraped from Nairobi real estate listings
-- 🧹 **Comprehensive data cleaning** and feature engineering
-- 📊 **Exploratory Data Analysis** with insightful visualizations
-- 🤖 **Multiple ML models** trained and compared (Linear Regression, Random Forest, XGBoost)
-- 📈 **Model evaluation** with proper metrics and performance analysis
-- 🚀 **App preparation** for deployment with Streamlit
+-  **Real-world data** scraped from Nairobi real estate listings
+-  **Comprehensive data cleaning** and feature engineering
+-  **Exploratory Data Analysis** with insightful visualizations
+-  **Multiple ML models** trained and compared (Linear Regression, Random Forest, XGBoost)
+-  **Model evaluation** with proper metrics and performance analysis
+-  **App preparation** for deployment with Streamlit
 
 ## Project Structure
 ```
@@ -62,25 +62,25 @@ Nairobi House Prediction/
 
 ## Project Workflow
 
-### Day 1: Data Collection ✅
+### Day 1: Data Collection 
 - Scraped 1000+ house listings from Nairobi real estate websites
 - Collected features: price, bedrooms, bathrooms, location, size, amenities
 - Created data dictionary and stored raw data
 
-### Day 2: Data Cleaning & Feature Engineering ✅
+### Day 2: Data Cleaning & Feature Engineering 
 - Handled missing values (median for numerical, mode for categorical)
 - Removed duplicate listings
 - Encoded categorical features (Neighborhood, Property_Type, Furnishing_Status)
 - Created new features: Price_Per_Bedroom, Has_Pool, Has_Garden, Has_Parking
 - Final cleaned dataset: 900+ records
 
-### Day 3: Exploratory Data Analysis & Baseline Model ✅
+### Day 3: Exploratory Data Analysis & Baseline Model 
 - Statistical analysis and distribution plots
 - Correlation analysis identifying key price drivers
 - Trained Linear Regression baseline model
 - Baseline performance: R² ≈ 0.25 (25% variance explained)
 
-### Day 4: Model Improvement ✅
+### Day 4: Model Improvement 
 - Trained advanced models: Random Forest and XGBoost
 - Compared model performance across different algorithms
 - Best model: XGBoost with R² ≈ 0.40 (40% variance explained)
@@ -90,13 +90,13 @@ Nairobi House Prediction/
 **Model Performance Note:**
 The 40% R² score indicates our model explains 40% of price variance. While below ideal, this reflects data quality challenges and missing features. The project continues to demonstrate the complete ML workflow and deployment process.
 
-### Day 5: App Preparation 🔄
+### Day 5: App Preparation 
 - Designed Streamlit app structure
 - Created app template with planned features
 - Prepared prediction function framework
 - Status: In progress
 
-### Day 6: Dashboard & Deployment ⏳
+### Day 6: Dashboard & Deployment 
 - Interactive dashboard creation (planned)
 - Final testing and documentation
 - Status: Not started
@@ -180,7 +180,7 @@ streamlit run app/app.py
 This is a learning project. Feel free to fork and experiment with your own improvements!
 
 ## License
-This project is for educational purposes.
+This project is for educational and practice purposes.
 
 ## Author
 
@@ -189,7 +189,7 @@ GitHub: [shadrack-kimaau](https://github.com/shadrack-kimaau)
 
 ## Acknowledgments
 - LT Data Fellowship Program
-- Nairobi real estate data sources
+- BuyRentKenya for data inspiration
 - Open-source ML community
 
 ---
