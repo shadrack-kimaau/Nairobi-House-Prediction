@@ -1,0 +1,22 @@
+{
+    "model_type": "Linear Regression",
+    "training_date": "2026-02-21",
+    "features": [
+        "Size_Numeric",
+        "Bedrooms_Numeric",
+        "Bathrooms",
+        "Total_Rooms",
+        "Has_Backup_Generator",
+        "Has_Garden",
+        "Has_Swimming_Pool",
+        "Has_Fibre_Internet",
+        "Has_Parking",
+        "Neighborhood_Encoded"
+    ],
+    "feature_count": 10,
+    "test_r2": 0.10873559560830881,
+    "test_rmse": 159023.77626003276,
+    "test_mae": 123956.95363301312,
+    "train_samples": 368,
+    "test_samples": 92
+}

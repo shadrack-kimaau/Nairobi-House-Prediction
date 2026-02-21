@@ -1,0 +1,30 @@
+{
+    "model_type": "Random Forest Regressor",
+    "n_estimators": 100,
+    "max_depth": 15,
+    "test_r2": 0.41120211119836114,
+    "test_rmse": 129253.37837824484,
+    "test_mae": 96672.5644094544,
+    "training_date": "2026-02-20",
+    "features": [
+        "Size_Numeric",
+        "Bedrooms_Numeric",
+        "Bathrooms",
+        "Total_Amenities",
+        "Total_Rooms",
+        "Luxury_Score",
+        "Bed_Bath_Ratio",
+        "Size_Per_Bedroom",
+        "Neighborhood_Popularity",
+        "Has_Parking",
+        "Has_Swimming_Pool",
+        "Has_Gym",
+        "Has_Garden",
+        "Has_CCTV",
+        "Has_Backup_Generator",
+        "Has_Fibre_Internet",
+        "Has_Gated_Community",
+        "Is_Weekend_Listing"
+    ],
+    "feature_count": 18
+}
