@@ -1,32 +1,34 @@
 # Core Data Science Libraries
-numpy
-pandas
-scipy
+numpy>=2.4.0
+pandas>=2.3.0
+scipy>=1.17.0
 
 # Machine Learning
-scikit-learn
-xgboost
-lightgbm
+scikit-learn>=1.8.0
+xgboost>=3.2.0
+lightgbm>=4.6.0
 
 # Visualization
-matplotlib
-seaborn
-plotly
+matplotlib>=3.10.0
+seaborn>=0.13.0
+plotly>=6.5.0
+altair>=6.0.0
 
 # Web Applications
-streamlit
-dash
+streamlit>=1.54.0
+dash>=4.0.0
 
 # Data Processing
-openpyxl
-xlrd
+openpyxl>=3.1.0
+xlrd>=2.0.0
 
 # Utilities
-python-dotenv
-pyyaml
-joblib
+python-dotenv>=1.2.0
+pyyaml>=6.0.0
+joblib>=1.5.0
 
-# Jupyter
-jupyter
-ipykernel
-notebook
+# Note: Jupyter packages not needed for deployment
+# Remove these for faster deployment
+# jupyter
+# ipykernel
+# notebook
