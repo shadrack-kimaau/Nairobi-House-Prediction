@@ -297,6 +297,10 @@ def update_scatter_plot(bedroom_filter):
     return create_scatter_plot(bedroom_filter)
 
 
+# Expose server for deployment (required by Heroku/Render)
+server = app.server
+
+
 def main():
     """Run the dashboard"""
     app.run(debug=True, host='0.0.0.0', port=8050)
