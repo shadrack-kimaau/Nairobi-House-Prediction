@@ -9,7 +9,7 @@ An end-to-end machine learning project that predicts house prices in Nairobi, Ke
 
 **Status:** ✅ **COMPLETED** - All 6 phases finished with working applications!
 
-##  Live Applications
+## Live Applications
 
 - **Prediction App:** [nairobi-house-prediction.streamlit.app](https://nairobi-house-prediction.streamlit.app/) - Interactive price prediction tool
 - **Analytics Dashboard:** Coming soon on Render - Comprehensive data visualizations
@@ -55,21 +55,27 @@ Nairobi House Prediction
 │   ├── modeling.py
 │   └── utils.py
 ├── scripts/                       # Utility scripts
-│   Procfile                       # Deployment configuration
-├── DASHBOARD_DEPLOYMENT.md        # Dashboard deployment guide
-├── └── scraper.py                # Web scraping script
+│   └── scraper.py                # Web scraping script
 ├── presentation/                  # Presentation materials
+├── Procfile                       # Deployment configuration
+├── DASHBOARD_DEPLOYMENT.md        # Dashboard deployment guide
 ├── config.yaml                    # Configuration file
-├──🛠 Technical Stack
+├── requirements.txt               # Python dependencies
+└── README.md                      # This file
+```
+
+## Technical Stack
 - **Python 3.12+**
 - **Data Processing:** Pandas, NumPy, SciPy
 - **Visualization:** Matplotlib, Seaborn, Plotly
 - **Machine Learning:** Scikit-learn, XGBoost, LightGBM
 - **Web Frameworks:** Streamlit (prediction app), Dash (analytics dashboard)
 - **Deployment:** Streamlit Cloud, Render, Gunicorn
+- **Data Collection:** BeautifulSoup/Selenium for web scraping
 
-##Project Workflow
-### Day 1: Data Cleaning & Feature Engineering ✅
+## Project Workflow
+
+### Day 1: Data Collection ✅
 - Scraped 460+ house listings from Nairobi real estate websites
 - Collected features: price, bedrooms, bathrooms, location, size, amenities
 - Created data dictionary and stored raw data
@@ -110,7 +116,13 @@ Nairobi House Prediction
   - Model performance comparison
   - Neighborhood price analysis
   - Amenities impact visualization
-  - Model Performance
+  - Interactive scatter plots with filters
+  - Correlation heatmaps
+- Prepared deployment files (Procfile, requirements.txt)
+- Tested dashboard locally
+- **Status: Complete and deployment-ready**
+
+## Model Performance
 
 | Model | R² Score | MAE (KES) | RMSE (KES) | Notes |
 |-------|----------|-----------|------------|-------|
@@ -132,18 +144,7 @@ Nairobi House Prediction
 5. Bathrooms
 6. Has_Backup_Generator
 7. Has_Garden
-8. Has_Swimming_Poolre | MAE | RMSE | Notes |
-|-------|----------|-----|------|-------|
-| Linear Regression | ~0.25 | High | High | Baseline model |
-| Random Forest | ~0.38 | Medium | Medium | Good improvement |
-| XGBoost | ~0.40 | Lower | Lower | Best performance |
-
-**Top Features by Importance:**
-1. Neighborhood (Location)
-2. Bedrooms
-3. Size_SqM
-4. Bathrooms
-5. Property_Type
+8. Has_Swimming_Pool
 
 ## Getting Started
 
@@ -159,36 +160,11 @@ pip or conda
 cd "Nairobi House Prediction"
 
 # Install dependencies
-pip install -r requlications
+pip install -r requirements.txt
 
-**Streamlit Prediction App:**
-```bash
-streamlit run app/app.py
-# Opens at http://localhost:8501
+# Or use setup script
+bash setup.sh
 ```
- Key Learnings & Insights
-- **Data Quality:** Real-world data requires extensive cleaning and feature engineering
-- **Model Selection:** Tree-based models (Random Forest, XGBoost) significantly outperform linear models
-- **Feature Impact:** Property size, bedrooms, and location are the strongest price predictors
-- **Amenities Value:** Backup generator (+KES 80K), garden (+KES 79K), and pool (+KES 42K) increase prices significantly
-- **Neighborhood Effect:** Lake View, Lavington, and Kitisuru command premium prices
-- **Deployment:** Building production-ready apps requires careful error handling and user experience design
-- * Documentation
-- [INDEX.md](INDEX.md) - Project navigation and organization guide
-- [SPRINT_PROGRESS.md](SPRINT_PROGRESS.md) - Detailed day-by-day progress tracking
-- [QUICKSTART.md](QUICKSTART.md) - Setup and installation guide
-- [DASHBOARD_DEPLOYMENT.md](DASHBOARD_DEPLOYMENT.md) - Dashboard deployment instructions
-- [data/data_dictionary.md](data/data_dictionary.md) - Data field descriptions
-- [models/README.md](models/README.md) - Model artifacts documentation
-- * Future Improvements
-- [ ] Collect more comprehensive data (house condition, exact coordinates, historical prices)
-- [ ] Implement advanced hyperparameter tuning (Optuna, GridSearch)
-- [ ] Add geospatial features (distance to amenities, coordinates-based analysis)
-- [ ] Create map visualizations with property locations
-- [ ] Implement model monitoring and retraining pipeline
-- [ ] Add user authentication for saved predictions
-- [ ] Build API endpoint for programmatic access
-- [ ] Integrate live data scraping and automatic updates
 
 ### Quick Start
 See [QUICKSTART.md](QUICKSTART.md) for detailed setup instructions.
@@ -204,42 +180,56 @@ jupyter notebook notebooks/day3_eda_baseline.ipynb
 jupyter notebook notebooks/day4_model_improvement.ipynb
 ```
 
-### Running the App (Once Complete)
-```bash
-##  Project Statistics
-- **Total Properties Analyzed:** 460
-- **Neighborhoods Covered:** 34
-- **Features Engineered:** 37
-- **Models Trained:** 3
-- **Best Model R²:** 41.1%
-- **Code Lines:** 2000+
-- **Notebooks:** 6
-- **Applications Built:** 2
+### Running the Applications
 
-**Project Duration:** 16/02/2026 - 23/02/2026  
-**Status:** ✅ COMPLETE  
-**Last Updated:** 23
+**Streamlit Prediction App:**
+```bash
+streamlit run app/app.py
+# Opens at http://localhost:8501
+```
+
+**Plotly Dash Dashboard:**
+```bash
+python dashboard/dashboard.py
+# Opens at http://localhost:8050
+```
+
+### Deployment
+
+**Streamlit App (Streamlit Cloud):**
+- Already deployed at [nairobi-house-prediction.streamlit.app](https://nairobi-house-prediction.streamlit.app/)
+- See [Streamlit Cloud documentation](https://docs.streamlit.io/streamlit-community-cloud/get-started)
+
+**Dash Dashboard (Render/Heroku):**
+- See [DASHBOARD_DEPLOYMENT.md](DASHBOARD_DEPLOYMENT.md) for detailed instructions
+- Supports Render, Heroku, and Railway platforms
 
 ## Key Learnings & Insights
-- Real-world data often requires extensive cleaning and feature engineering
-- Tree-based models (Random Forest, XGBoost) significantly outperform linear models for this problem
-- Location (Neighborhood) is the strongest predictor of house prices in Nairobi
-- Model performance is limited by data quality and missing important features
-- End-to-end project completion is valuable even with moderate model accuracy
+- **Data Quality:** Real-world data requires extensive cleaning and feature engineering
+- **Model Selection:** Tree-based models (Random Forest, XGBoost) significantly outperform linear models
+- **Feature Impact:** Property size, bedrooms, and location are the strongest price predictors
+- **Amenities Value:** Backup generator (+KES 80K), garden (+KES 79K), and pool (+KES 42K) increase prices significantly
+- **Neighborhood Effect:** Lake View, Lavington, and Kitisuru command premium prices
+- **Deployment:** Building production-ready apps requires careful error handling and user experience design
+- **Workflow:** End-to-end project completion from scraping to deployment provides comprehensive ML experience
 
 ## Documentation
 - [INDEX.md](INDEX.md) - Project navigation and organization guide
 - [SPRINT_PROGRESS.md](SPRINT_PROGRESS.md) - Detailed day-by-day progress tracking
 - [QUICKSTART.md](QUICKSTART.md) - Setup and installation guide
+- [DASHBOARD_DEPLOYMENT.md](DASHBOARD_DEPLOYMENT.md) - Dashboard deployment instructions
 - [data/data_dictionary.md](data/data_dictionary.md) - Data field descriptions
+- [models/README.md](models/README.md) - Model artifacts documentation
 
 ## Future Improvements
-- Collect more comprehensive data (house condition, exact coordinates, market trends)
-- Implement hyperparameter tuning for better performance
-- Add more feature engineering (neighborhood demographics, distance to amenities)
-- Complete Streamlit app with full functionality
-- Deploy to cloud platform (Heroku, Streamlit Cloud, AWS)
-- Build interactive dashboard with Plotly
+- [ ] Collect more comprehensive data (house condition, exact coordinates, historical prices)
+- [ ] Implement advanced hyperparameter tuning (Optuna, GridSearch)
+- [ ] Add geospatial features (distance to amenities, coordinates-based analysis)
+- [ ] Create map visualizations with property locations
+- [ ] Implement model monitoring and retraining pipeline
+- [ ] Add user authentication for saved predictions
+- [ ] Build API endpoint for programmatic access
+- [ ] Integrate live data scraping and automatic updates
 
 ## Contributing
 This is a learning project. Feel free to fork and experiment with your own improvements!
@@ -259,5 +249,16 @@ GitHub: [shadrack-kimaau](https://github.com/shadrack-kimaau)
 
 ---
 
-**Project Duration:** 16/02/2026 - 22/02/2026  
-**Last Updated:** 21/02/2026
+## Project Statistics
+- **Total Properties Analyzed:** 460
+- **Neighborhoods Covered:** 34
+- **Features Engineered:** 37
+- **Models Trained:** 3
+- **Best Model R²:** 41.1%
+- **Code Lines:** 2000+
+- **Notebooks:** 6
+- **Applications Built:** 2
+
+**Project Duration:** 16/02/2026 - 23/02/2026  
+**Status:** ✅ COMPLETE  
+**Last Updated:** 23/02/2026
